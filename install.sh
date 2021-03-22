@@ -24,7 +24,7 @@ set -e
 # https://github.com/ash-development/qtweet-installer/new/main/blob/master/LICENSE #
 #                                                                                  #
 # This script is not associated with the official QTweet Project.                  #
-# https://github.com/thekilluadev/qtweet-installer/new/main                        #
+# https://github.com/ash-development/qtweet-installer/                             #
 #                                                                                  #
 ####################################################################################
 

@@ -85,8 +85,8 @@ while [ "$done" == false ]; do
   )
   
   actions=(
-    install
-    update
+    "bash install-bot.sh"
+    "bash install-update.sh"
   )
   output "What would you like to do?"
 

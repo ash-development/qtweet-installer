@@ -71,3 +71,30 @@ output
 output "This script is not associated with the official QTweet Project."
 
 output
+
+while [ "$done" == false ]; do
+  options=(
+    Install QTweet
+    Update QTweet
+  )
+  
+  actions={
+    install
+    update
+  )
+  output "What would you like to do?"
+
+  for i in "${!options[@]}"; do
+    output "[$i] ${options[$i]}"
+  done
+
+  echo -n "* Input 0-$((${#actions[@]}-1)): "
+  read -r action
+
+  [ -z "$action" ] && error "Input is required" && continue
+
+  valid_input=("$(for ((i=0;i<=${#actions[@]}-1;i+=1)); do echo "${i}"; done)")
+  [[ ! " ${valid_input[*]} " =~ ${action} ]] && error "Invalid option"
+  [[ " ${valid_input[*]} " =~ ${action} ]] && done=true && eval "${actions[$action]}"
+  
+  done

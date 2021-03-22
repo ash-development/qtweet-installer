@@ -49,6 +49,12 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
+if ! [ -x "$(command -v git)" ]; then
+  echo "* git-all is required in order for this script to work."
+  echo "* install using apt (Debian and derivatives) or yum/dnf (CentOS)"
+  exit 1
+fi
+
 output() {
   echo -e "* ${1}"
 }

@@ -64,8 +64,10 @@ error() {
 
 done=false
 
-output "QTweet installation script @ $SCRIPT_VERSION
+output "QTweet installation script @ $SCRIPT_VERSION"
 output
 output "Copyright (C) 2021, Killua Schnoor, <killua@schnoor.email>"
 output
 output "This script is not associated with the official QTweet Project."
+
+output

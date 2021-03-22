@@ -74,8 +74,8 @@ output
 
 while [ "$done" == false ]; do
   options=(
-    Install QTweet
-    Update QTweet
+    "Install QTweet"
+    "Update QTweet"
   )
   
   actions=(

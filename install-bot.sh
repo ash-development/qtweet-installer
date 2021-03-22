@@ -76,37 +76,41 @@ TWITTER_ACCESS_TOKEN_SECRET=
 ## You don't need to set this unless you want to put your bot on top.gg
 DBL_TOKEN=
 
-TIMEZONE=
+TIMEZONE=Europe/Paris
 DEFAULT_LANG=en
 
 # Verbose mode allows me to get more information in case of bugs.
 # set it to 1 and let the bot run before sending me your logs
-VERBOSE=
+VERBOSE=0
 
 # App stuff
-PREFIX=
-BOT_NAME=
+PREFIX=!!
+BOT_NAME=QTweet
 
 ## These variables set how fast the bot spawns shards. We avoid doing it too quickly.
 ## I don't recommend touching this, it won't affect you if your bot is in under 1000
 ## servers anyway.
-SHARD_SPAWN_DELAY=
-SHARD_SPAWN_TIMEOUT=
+SHARD_SPAWN_DELAY=20000
+SHARD_SPAWN_TIMEOUT=120000
 
 # The max amount we're willing to wait to reconnect to Twitter
 # 0 means no maximum
-TWITTER_MAX_RECONNECT_DELAY=
+TWITTER_MAX_RECONNECT_DELAY=240000
 
 # If we don't get a tweet in this many seconds, reconnect the stream
-TWEETS_TIMEOUT=
+TWEETS_TIMEOUT=3600
 
 # These 2 variables are used for checking that twitter users in the DB are valid at boot
 ## How long to wait in seconds between two batches of users
-USERS_CHECK_TIMEOUT=
+USERS_CHECK_TIMEOUT=1800
 ## How many users to check in one batch
-USERS_BATCH_SIZE=
+USERS_BATCH_SIZE=500
 ## Set to 1 to disable this check at boot
-DISABLE_SANITY_CHECK=
+DISABLE_SANITY_CHECK=0
+
+# Disable streams completely.
+# This is only meant for debugging purposes and will make QTweet non-functional to most users.
+DISABLE_STREAMS=0
 
 ##### User input functions ######
 

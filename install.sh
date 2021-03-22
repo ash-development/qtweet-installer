@@ -78,7 +78,7 @@ while [ "$done" == false ]; do
     Update QTweet
   )
   
-  actions={
+  actions=(
     install
     update
   )

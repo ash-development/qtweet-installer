@@ -59,6 +59,55 @@ hyperlink() {
   echo -e "\e]8;;${1}\a${1}\e]8;;\a"
 }
 
+########## Variables ############
+
+# Credentials for the database. 
+DB_NAME=qtweetData
+DB_USER=qtweetAdmin
+DB_PASSWORD=hunter2
+
+DISCORD_TOKEN=
+
+TWITTER_API_KEY=
+TWITTER_API_SECRET_KEY=
+TWITTER_ACCESS_TOKEN=
+TWITTER_ACCESS_TOKEN_SECRET=
+## DBL Token is for Discord Bot List (now top.gg).
+## You don't need to set this unless you want to put your bot on top.gg
+DBL_TOKEN=
+
+TIMEZONE=
+DEFAULT_LANG=en
+
+# Verbose mode allows me to get more information in case of bugs.
+# set it to 1 and let the bot run before sending me your logs
+VERBOSE=
+
+# App stuff
+PREFIX=
+BOT_NAME=
+
+## These variables set how fast the bot spawns shards. We avoid doing it too quickly.
+## I don't recommend touching this, it won't affect you if your bot is in under 1000
+## servers anyway.
+SHARD_SPAWN_DELAY=
+SHARD_SPAWN_TIMEOUT=
+
+# The max amount we're willing to wait to reconnect to Twitter
+# 0 means no maximum
+TWITTER_MAX_RECONNECT_DELAY=
+
+# If we don't get a tweet in this many seconds, reconnect the stream
+TWEETS_TIMEOUT=
+
+# These 2 variables are used for checking that twitter users in the DB are valid at boot
+## How long to wait in seconds between two batches of users
+USERS_CHECK_TIMEOUT=
+## How many users to check in one batch
+USERS_BATCH_SIZE=
+## Set to 1 to disable this check at boot
+DISABLE_SANITY_CHECK=
+
 ##### User input functions ######
 
 required_input() {

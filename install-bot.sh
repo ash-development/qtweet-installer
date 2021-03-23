@@ -164,4 +164,3 @@ password_input() {
 ##### Main installation functions #####
 git clone https://github.com/atomheartother/QTweet.git
 cd QTweet
-cp .example.env .env
